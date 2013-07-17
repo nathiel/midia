@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+	<title>Mídia Kit-G1/Pará</title>
+<noscript>
+		<style type="text/css">
+			#dock { top: -32px; }
+			a.dock-item { position: relative; float: left; margin-right: 10px; }
+			.dock-item span { display: block; }
+			.stack { top: 0; }
+			.stack ul li { position: relative; }
+		</style>
+	</noscript>
+</head>
+<body>
+<nav>
+<div id="stacksNav">Menu</div>
+	
+	<!-- BEGIN STACK ============================================================ -->
+	<div class="stack">
+		<img src="img/stacks/stack.png" alt="stack"/>
+		<ul id="stack">
+			<li><a href=""><span>Especificações</span><img src="img/stacks/roda.png" alt="Aperature" /></a></li>
+			<li><a href="all-examples.html"><span>Valores</span><img src="img/stacks/preco.png" alt="Photoshop" /></a></li>
+			<li><a href="example3.html"><span>Formatos</span><img src="img/stacks/formatos.png" alt="Safari" /></a></li>
+			<li><a href="#comscore"><span>comScore.</span><img src="img/stacks/comscore.png" alt="Coda" /></a></li>
+			<li><a href="#anunciar"><span>Porque_anunciar?</span><img src="img/stacks/pq.png" alt="Finder" /></a></li>	
+            <li><a href="#home"><span>Apresentação</span><img src="img/stacks/home.png" alt="Finder" /></a></li>	
+		</ul>
+	</div><!-- end div .stack -->
+	<!-- END STACK ============================================================ -->
+</nav>
+<a name="home"></a>
+<section class="capa">
+</section>
+<section class="meios">
+</section>
+<section class="share">
+</section>
+<section class="usuarios">
+</section>
+<section class="perfil">
+</section>
+<a name="anunciar"></a>
+<section class="pq">
+</section>
+<section class="comparativo">
+</section>
+<section class="audiencia">
+</section>
+<section class="audiencia_2">
+</section>
+<section class="audiencia_3">
+</section>
+<a name="comscore"></a>
+<section class="com">
+</section>
+<section class="concorrencia">
+</section>
+
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/menu.js"></script>
+<script type="text/javascript">// <![CDATA[
+$(document).ready(function() {
+function filterPath(string) {
+return string
+.replace(/^\//,'')
+.replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+.replace(/\/$/,'');
+}
+$('a[href*=#]').each(function() {
+if ( filterPath(location.pathname) == filterPath(this.pathname)
+&& location.hostname == this.hostname
+&& this.hash.replace(/#/,'') ) {
+var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+if ($target) {
+var targetOffset = $target.offset().top;
+$(this).click(function() {
+$('html, body').animate({scrollTop: targetOffset}, 500);
+return false;
+});
+}
+}
+});
+});
+// ]]></script>
+</body>
+</html>
